@@ -9,10 +9,12 @@ html { scroll-behavior: smooth; }
 
 *, *::before, *::after { box-sizing: border-box; }
 
-/* Sticky, translucent header */
+/* Fixed, translucent header */
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
   backdrop-filter: saturate(180%) blur(12px);
   background: rgba(255, 255, 255, 0.72);
@@ -28,6 +30,9 @@ html { scroll-behavior: smooth; }
   align-items: center;
   justify-content: space-between;
 }
+
+/* Offset body content so it never hides behind fixed header */
+body { padding-top: var(--header-h); }
 
 .site-header__brand {
   color: #1d1d1f;
@@ -69,4 +74,3 @@ html { scroll-behavior: smooth; }
     color: #f5f5f7;
   }
 }
-
