@@ -1,3 +1,9 @@
 
+# How to run locally using docker 
 
-ocker run --rm -it -p 4000:4000 -v "${PWD}:/srv/jekyll" jekyll/jekyll jekyll serve --livereload --watch
+docker run --rm -it `
+  -p 4000:4000 -p 35729:35729 `
+  -v "${PWD}:/srv/jekyll" `
+  -v "${PWD}\vendor\bundle:/usr/local/bundle" `
+  jekyll/jekyll:4 `
+  bash -lc "bundle install && bundle exec jekyll serve --livereload --force_polling --host 0.0.0.0"
