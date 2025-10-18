@@ -16,23 +16,32 @@ stylesheet: /assets/css/how-it-works.css
   <ol class="steps">
     <li>
       <h2>User scans QR Code</h2>
-      <p>Your customer walks in, scans the QR code.</p>
+      <p>Your scans the QR code. The customer could be at home or could be scanning QR visible at store. This opens the store website or mobile application depending the subscription.</p>
+      <figure class="step__media" aria-label="Scan to order">
+        <img class="step__img" src="{{ '/assets/scan_to_order.png' | relative_url }}" alt="Customer scanning QR to open your catalog and order" />
+      </figure>
     </li>
     <li>
-      <h2>Add items and place order</h2>
+      <h2>Add items to cart</h2>
       <p>They add items, share contact and address details, and submit the order.</p>
+      <figure class="step__media" aria-label="Search and add">
+        <img class="step__img" src="{{ '/assets/search_and_add.png' | relative_url }}" alt="Customer search for an item and add desired quantity to the cart." />
+      </figure>
     </li>
     <li>
-      <h2>You confirm and prepare</h2>
-      <p>You receive the order instantly. Confirm, adjust if needed, and start preparing.</p>
+      <h2>Customer checkout</h2>
+      <p>The customer sees a cart that has all the items added.</p>
+      <figure class="step__media" aria-label="Cart">
+        <img class="step__img" src="{{ '/assets/cart.png' | relative_url }}" alt="Customer can go to the cart and see the items added" />
+      </figure>
     </li>
     <li>
-      <h2>Live updates</h2>
-      <p>Customers get real‑time status updates—confirmed, preparing, ready, or out for delivery.</p>
+      <h2>Order processing</h2>
+      <p>Depending on how the store owner configured the store, the order would be visible for processing or approval.</p>
     </li>
     <li>
       <h2>Pickup or delivery</h2>
-      <p>Customers pick up in‑store or receive delivery as per your settings.</p>
+      <p>Customers pick up in‑store or receive delivery as per your settings. We have option for live tracking.</p>
     </li>
   </ol>
 
@@ -41,4 +50,4 @@ stylesheet: /assets/css/how-it-works.css
     <a class="btn btn--ghost" href="{{ '/know-more.html' | relative_url }}">Why Us?</a>
   </div>
 </main>
-
+<script src="{{ '/assets/js/how-it-works.js' | relative_url }}" defer></script>
