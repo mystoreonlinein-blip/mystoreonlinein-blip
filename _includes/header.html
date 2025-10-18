@@ -1,6 +1,10 @@
-<header>
-  <nav>
-    <a href="{{ '/' | relative_url }}" aria-label="Home">Home</a>
-  </nav>
+<header class="site-header" role="banner">
+  <div class="site-header__wrap">
+    <a class="site-header__brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <nav class="site-header__nav" aria-label="Primary">
+      <a class="site-header__link{% if page.url == '/home.html' %} is-active{% endif %}" href="{{ '/home.html' | relative_url }}">Home</a>
+      <a class="site-header__link{% if page.url == '/know-more.html' %} is-active{% endif %}" href="{{ '/know-more.html' | relative_url }}">Know More</a>
+      <a class="site-header__link{% if page.url == '/contact.html' %} is-active{% endif %}" href="{{ '/contact.html' | relative_url }}">Contact</a>
+    </nav>
+  </div>
 </header>
-
