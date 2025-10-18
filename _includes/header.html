@@ -1,7 +1,12 @@
 <header class="site-header" role="banner">
   <div class="site-header__wrap">
     <a class="site-header__brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-    <nav class="site-header__nav" aria-label="Primary">
+    <button class="site-header__toggle" aria-label="Toggle navigation" aria-controls="primary-nav" aria-expanded="false">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <nav id="primary-nav" class="site-header__nav" aria-label="Primary">
       <a class="site-header__link{% if page.url == '/home.html' %} is-active{% endif %}" href="{{ '/home.html' | relative_url }}">Home</a>
       <a class="site-header__link{% if page.url == '/why-go-online.html' %} is-active{% endif %}" href="{{ '/why-go-online.html' | relative_url }}">Why?</a>
       <a class="site-header__link{% if page.url == '/how-it-works.html' %} is-active{% endif %}" href="{{ '/how-it-works.html' | relative_url }}">How It Works</a>
@@ -9,3 +14,47 @@
     </nav>
   </div>
 </header>
+<script>
+  (function() {
+    var header = document.querySelector('.site-header');
+    var btn = document.querySelector('.site-header__toggle');
+    var nav = document.getElementById('primary-nav');
+    if (!header || !btn || !nav) return;
+
+    function applyLayout() {
+      var isMobile = window.matchMedia('(max-width: 720px)').matches;
+      if (isMobile) {
+        // Show nav only when header has is-open
+        if (header.classList.contains('is-open')) {
+          nav.removeAttribute('hidden');
+          btn.setAttribute('aria-expanded', 'true');
+        } else {
+          nav.setAttribute('hidden', '');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      } else {
+        // Desktop: ensure nav visible and toggle collapsed
+        header.classList.remove('is-open');
+        nav.removeAttribute('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    }
+
+    btn.addEventListener('click', function () {
+      header.classList.toggle('is-open');
+      applyLayout();
+    });
+
+    // Close menu when a link is clicked (mobile UX)
+    nav.addEventListener('click', function(e){
+      if (e.target && e.target.matches('a')) {
+        header.classList.remove('is-open');
+        applyLayout();
+      }
+    });
+
+    // Re-evaluate on resize or orientation change
+    window.addEventListener('resize', applyLayout);
+    applyLayout();
+  })();
+  </script>
