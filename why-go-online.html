@@ -1,30 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Why Us? — My Store Online</title>
-<link rel="stylesheet" href="/assets/css/theme.css" />
-
-
-<link rel="stylesheet" href="/assets/css/know-more.css" />
-
-
-  </head>
-  <body>
-    <header class="site-header" role="banner">
-  <div class="site-header__wrap">
-    <a class="site-header__brand" href="/">My Store Online</a>
-    <nav class="site-header__nav" aria-label="Primary">
-      <a class="site-header__link" href="/home.html">Home</a>
-      <a class="site-header__link is-active" href="/know-more.html">Why Us?</a>
-      <a class="site-header__link" href="/how-it-works.html">How It Works</a>
-      <a class="site-header__link" href="/contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
-
-    <main class="snap">
+---
+layout: default
+title: Why Us? — My Store Online
+stylesheet: /assets/css/why-go-online.css
+---
+<main class="snap">
   <!-- Section 1: Why online presence -->
   <section id="why" class="section">
     <div class="content">
@@ -95,20 +74,7 @@
           Order from anywhere, anytime
         </li>
       </ul>
-      <a class="next" href="#totals" aria-label="Back to previous section">
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M18 15l-6-6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </a>
+      <a class="btn" href="{{ '/how-it-works.html' | relative_url }}" aria-label="Learn how it works">Learn how it works?</a>
     </div>
   </section>
 </main>
-
-    <footer>
-  <small>&copy; <span>2025</span> My Store Online</small>
-</footer>
-
-
-  </body>
-</html>
-

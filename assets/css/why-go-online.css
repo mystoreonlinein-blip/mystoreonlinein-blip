@@ -110,6 +110,25 @@ p {
 
 .next svg { width: 1.1rem; height: 1.1rem; }
 
+/* Call-to-action button */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(29, 29, 31, 0.15);
+  background: #1d1d1f;
+  color: #fff;
+  font-size: 0.98rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.10);
+}
+
+.btn:hover { transform: translateY(-1px); box-shadow: 0 14px 28px rgba(0, 0, 0, 0.14); }
+
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
   body {
@@ -120,4 +139,5 @@ p {
   .badge { background: rgba(245, 245, 247, 0.12); color: #f5f5f7; }
   .next { background: rgba(245, 245, 247, 0.12); color: #f5f5f7; border-color: rgba(245,245,247,0.18); box-shadow: 0 10px 26px rgba(0,0,0,0.35); }
   .next:hover { box-shadow: 0 14px 34px rgba(0,0,0,0.45); }
+  .btn { background: #f5f5f7; color: #1d1d1f; box-shadow: 0 12px 30px rgba(0,0,0,0.35); }
 }
