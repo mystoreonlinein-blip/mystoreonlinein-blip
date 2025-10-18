@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Features - My Store Online</title>
+<link rel="stylesheet" href="/assets/css/theme.css" />
+
+
+<link rel="stylesheet" href="/assets/css/features.css" />
+
+
+  </head>
+  <body>
+    <header class="site-header" role="banner">
+  <div class="site-header__wrap">
+    <a class="site-header__brand" href="/">My Store Online</a>
+    <button class="site-header__toggle" aria-label="Toggle navigation" aria-controls="primary-nav" aria-expanded="false">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <nav id="primary-nav" class="site-header__nav" aria-label="Primary">
+      <a class="site-header__link" href="/home.html">Home</a>
+      <a class="site-header__link" href="/why-go-online.html">Why?</a>
+      <a class="site-header__link" href="/how-it-works.html">How It Works</a>
+      <a class="site-header__link is-active" href="/features.html">Features</a>
+      <a class="site-header__link" href="/contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+<script>
+  (function() {
+    var header = document.querySelector('.site-header');
+    var btn = document.querySelector('.site-header__toggle');
+    var nav = document.getElementById('primary-nav');
+    if (!header || !btn || !nav) return;
+
+    function applyLayout() {
+      var isMobile = window.matchMedia('(max-width: 720px)').matches;
+      if (isMobile) {
+        // Show nav only when header has is-open
+        if (header.classList.contains('is-open')) {
+          nav.removeAttribute('hidden');
+          btn.setAttribute('aria-expanded', 'true');
+        } else {
+          nav.setAttribute('hidden', '');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      } else {
+        // Desktop: ensure nav visible and toggle collapsed
+        header.classList.remove('is-open');
+        nav.removeAttribute('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    }
+
+    btn.addEventListener('click', function () {
+      header.classList.toggle('is-open');
+      applyLayout();
+    });
+
+    // Close menu when a link is clicked (mobile UX)
+    nav.addEventListener('click', function(e){
+      if (e.target && e.target.matches('a')) {
+        header.classList.remove('is-open');
+        applyLayout();
+      }
+    });
+
+    // Re-evaluate on resize or orientation change
+    window.addEventListener('resize', applyLayout);
+    applyLayout();
+  })();
+  </script>
+
+    <p class="features__lead">These are the store-facing features.</p>
+<main class="features">
+  <aside class="features__sidebar" aria-label="Feature navigation">
+    <h2 class="visually-hidden">Features</h2>
+    <nav class="tree" aria-label="Features tree">
+      <ul class="tree__list">
+        <li>
+          <button class="tree__toggle" aria-expanded="true">Store Onboarding</button>
+          <ul class="tree__children">
+            <li><a class="tree__link is-active" href="#Store-Onboarding">Onboarding</a></li>
+            <li><a class="tree__link" href="#feat-search">Store Log in</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree__toggle" aria-expanded="true">Catalog</button>
+          <ul class="tree__children is-collapsed">
+            <li><a class="tree__link" href="#feat-categories">Categories</a></li>
+            <li><a class="tree__link" href="#feat-search">Search</a></li>
+            <li><a class="tree__link" href="#feat-variants">Variants & pricing</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree__toggle" aria-expanded="false">Orders</button>
+          <ul class="tree__children is-collapsed">
+            <li><a class="tree__link" href="#feat-live-queue">Live queue</a></li>
+            <li><a class="tree__link" href="#feat-invoices">Invoices & taxes</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree__toggle" aria-expanded="false">Customers</button>
+          <ul class="tree__children is-collapsed">
+            <li><a class="tree__link" href="#feat-profiles">Profiles</a></li>
+            <li><a class="tree__link" href="#feat-addresses">Addresses</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree__toggle" aria-expanded="false">Integrations</button>
+          <ul class="tree__children is-collapsed">
+            <li><a class="tree__link" href="#feat-whatsapp">WhatsApp updates</a></li>
+            <li><a class="tree__link" href="#feat-payments">Payments</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree__toggle" aria-expanded="false">Analytics</button>
+          <ul class="tree__children is-collapsed">
+            <li><a class="tree__link" href="#feat-sales">Sales overview</a></li>
+            <li><a class="tree__link" href="#feat-top">Top products</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+
+  <section class="features__content" aria-live="polite">
+    <article id="Store-Onboarding" class="feature-section is-visible">
+      <h1>gsdfgsdfg</h1>
+      <p>Organize your catalog into categories for easy browsing and faster discovery. Control visibility and ordering.</p>
+    </article>
+
+    <article id="feat-categories" class="feature-section">
+      <h1>Categories</h1>
+      <p>Organize your catalog into categories for easy browsing and faster discovery. Control visibility and ordering.</p>
+    </article>
+
+    <article id="feat-search" class="feature-section" hidden>
+      <h1>Search</h1>
+      <p>Instant keyword search with typo-tolerance helps customers find items quickly.</p>
+    </article>
+
+    <article id="feat-variants" class="feature-section" hidden>
+      <h1>Variants & Pricing</h1>
+      <p>Support for sizes, colors, and custom units; flexible pricing and taxes.</p>
+    </article>
+
+    <article id="feat-live-queue" class="feature-section" hidden>
+      <h1>Live Queue</h1>
+      <p>See orders as they arrive. Accept, prepare, and deliver with real-time status.</p>
+    </article>
+
+    <article id="feat-invoices" class="feature-section" hidden>
+      <h1>Invoices & Taxes</h1>
+      <p>Generate itemized invoices automatically with taxes applied correctly.</p>
+    </article>
+
+    <article id="feat-profiles" class="feature-section" hidden>
+      <h1>Customer Profiles</h1>
+      <p>Keep order history and preferences to serve customers better.</p>
+    </article>
+
+    <article id="feat-addresses" class="feature-section" hidden>
+      <h1>Addresses</h1>
+      <p>Save multiple addresses per customer for quick checkout.</p>
+    </article>
+
+    <article id="feat-whatsapp" class="feature-section" hidden>
+      <h1>WhatsApp Updates</h1>
+      <p>Send confirmations and live updates via WhatsApp to keep customers informed.</p>
+    </article>
+
+    <article id="feat-payments" class="feature-section" hidden>
+      <h1>Payments</h1>
+      <p>Support for COD and online payments with popular providers.</p>
+    </article>
+
+    <article id="feat-sales" class="feature-section" hidden>
+      <h1>Sales Overview</h1>
+      <p>Track revenue, orders, and trends over time.</p>
+    </article>
+
+    <article id="feat-top" class="feature-section" hidden>
+      <h1>Top Products</h1>
+      <p>Identify best-sellers and optimize your catalog.</p>
+    </article>
+  </section>
+</main>
+<script src="/assets/js/features.js" defer></script>
+
+
+    <footer>
+  <small>&copy; <span>2025</span> My Store Online</small>
+</footer>
+
+
+  </body>
+</html>
+

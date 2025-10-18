@@ -1,0 +1,122 @@
+---
+layout: default
+title: Features - My Store Online
+stylesheet: /assets/css/features.css
+---
+<p class="features__lead">These are the store-facing features.</p>
+<main class="features">
+  <aside class="features__sidebar" aria-label="Feature navigation">
+    <h2 class="visually-hidden">Features</h2>
+    <nav class="tree" aria-label="Features tree">
+      <ul class="tree__list">
+        <li>
+          <button class="tree__toggle" aria-expanded="true">Store Onboarding</button>
+          <ul class="tree__children">
+            <li><a class="tree__link is-active" href="#Store-Onboarding">Onboarding</a></li>
+            <li><a class="tree__link" href="#feat-search">Store Log in</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree__toggle" aria-expanded="true">Catalog</button>
+          <ul class="tree__children is-collapsed">
+            <li><a class="tree__link" href="#feat-categories">Categories</a></li>
+            <li><a class="tree__link" href="#feat-search">Search</a></li>
+            <li><a class="tree__link" href="#feat-variants">Variants & pricing</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree__toggle" aria-expanded="false">Orders</button>
+          <ul class="tree__children is-collapsed">
+            <li><a class="tree__link" href="#feat-live-queue">Live queue</a></li>
+            <li><a class="tree__link" href="#feat-invoices">Invoices & taxes</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree__toggle" aria-expanded="false">Customers</button>
+          <ul class="tree__children is-collapsed">
+            <li><a class="tree__link" href="#feat-profiles">Profiles</a></li>
+            <li><a class="tree__link" href="#feat-addresses">Addresses</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree__toggle" aria-expanded="false">Integrations</button>
+          <ul class="tree__children is-collapsed">
+            <li><a class="tree__link" href="#feat-whatsapp">WhatsApp updates</a></li>
+            <li><a class="tree__link" href="#feat-payments">Payments</a></li>
+          </ul>
+        </li>
+        <li>
+          <button class="tree__toggle" aria-expanded="false">Analytics</button>
+          <ul class="tree__children is-collapsed">
+            <li><a class="tree__link" href="#feat-sales">Sales overview</a></li>
+            <li><a class="tree__link" href="#feat-top">Top products</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+
+  <section class="features__content" aria-live="polite">
+    <article id="Store-Onboarding" class="feature-section is-visible">
+      <h1>gsdfgsdfg</h1>
+      <p>Organize your catalog into categories for easy browsing and faster discovery. Control visibility and ordering.</p>
+    </article>
+
+    <article id="feat-categories" class="feature-section">
+      <h1>Categories</h1>
+      <p>Organize your catalog into categories for easy browsing and faster discovery. Control visibility and ordering.</p>
+    </article>
+
+    <article id="feat-search" class="feature-section" hidden>
+      <h1>Search</h1>
+      <p>Instant keyword search with typo-tolerance helps customers find items quickly.</p>
+    </article>
+
+    <article id="feat-variants" class="feature-section" hidden>
+      <h1>Variants & Pricing</h1>
+      <p>Support for sizes, colors, and custom units; flexible pricing and taxes.</p>
+    </article>
+
+    <article id="feat-live-queue" class="feature-section" hidden>
+      <h1>Live Queue</h1>
+      <p>See orders as they arrive. Accept, prepare, and deliver with real-time status.</p>
+    </article>
+
+    <article id="feat-invoices" class="feature-section" hidden>
+      <h1>Invoices & Taxes</h1>
+      <p>Generate itemized invoices automatically with taxes applied correctly.</p>
+    </article>
+
+    <article id="feat-profiles" class="feature-section" hidden>
+      <h1>Customer Profiles</h1>
+      <p>Keep order history and preferences to serve customers better.</p>
+    </article>
+
+    <article id="feat-addresses" class="feature-section" hidden>
+      <h1>Addresses</h1>
+      <p>Save multiple addresses per customer for quick checkout.</p>
+    </article>
+
+    <article id="feat-whatsapp" class="feature-section" hidden>
+      <h1>WhatsApp Updates</h1>
+      <p>Send confirmations and live updates via WhatsApp to keep customers informed.</p>
+    </article>
+
+    <article id="feat-payments" class="feature-section" hidden>
+      <h1>Payments</h1>
+      <p>Support for COD and online payments with popular providers.</p>
+    </article>
+
+    <article id="feat-sales" class="feature-section" hidden>
+      <h1>Sales Overview</h1>
+      <p>Track revenue, orders, and trends over time.</p>
+    </article>
+
+    <article id="feat-top" class="feature-section" hidden>
+      <h1>Top Products</h1>
+      <p>Identify best-sellers and optimize your catalog.</p>
+    </article>
+  </section>
+</main>
+<script src="{{ '/assets/js/features.js' | relative_url }}" defer></script>
+
