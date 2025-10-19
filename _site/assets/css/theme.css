@@ -35,7 +35,8 @@ html { scroll-behavior: smooth; }
 /* Offset body content so it never hides behind fixed header */
 body {
   padding-top: var(--header-h);
-  min-height: 100svh;
+  /* Account for fixed header so footer aligns to bottom on mobile */
+  min-height: calc(100svh - var(--header-h));
   display: flex;
   flex-direction: column;
 }
