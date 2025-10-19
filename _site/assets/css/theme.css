@@ -33,7 +33,12 @@ html { scroll-behavior: smooth; }
 }
 
 /* Offset body content so it never hides behind fixed header */
-body { padding-top: var(--header-h); }
+body {
+  padding-top: var(--header-h);
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
 
 .site-header__brand {
   color: #1d1d1f;
@@ -108,6 +113,9 @@ body { padding-top: var(--header-h); }
   align-items: center;
   justify-content: center;
 }
+
+/* Push footer to the bottom on short pages */
+.site-footer { margin-top: auto; }
 
 /* Ensure footer text centers on all devices */
 .site-footer small { display: block; margin: 0 auto; text-align: center; width: 100%; }
