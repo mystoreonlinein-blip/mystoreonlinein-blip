@@ -12,6 +12,7 @@ body { margin: 0; color: #1d1d1f; }
   max-width: 880px;
   margin: 0 auto;
   padding: 2rem 1rem 3rem;
+  overflow-x: hidden; /* prevent accidental horizontal scroll on small screens */
 }
 
 .how__intro { text-align: center; margin: 0 auto 1.5rem; max-width: 760px; }
@@ -109,7 +110,9 @@ h1 { margin: 1rem 0 0.75rem; font-size: clamp(2rem, 5vw, 3rem); font-weight: 600
 /* Step media */
 .step__media { margin-top: 0.6rem; display: flex; justify-content: center; }
 .step__img {
-  width: clamp(160px, 60vw, 300px);
+  /* Keep images within their column to avoid overflow */
+  width: clamp(160px, 100%, 300px);
+  max-width: 100%;
   height: auto;
   display: block;
   border-radius: 12px;
