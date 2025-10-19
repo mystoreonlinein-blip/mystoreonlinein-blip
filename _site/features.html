@@ -83,16 +83,27 @@
         <li>
           <button class="tree__toggle" aria-expanded="true">Store Onboarding</button>
           <ul class="tree__children">
-            <li><a class="tree__link is-active" href="#Store-Onboarding">Onboarding</a></li>
-            <li><a class="tree__link" href="#feat-search">Store Log in</a></li>
+            <li><a class="tree__link is-active" href="#feat-Store-Onboarding">Onboarding</a></li>
+            <li><a class="tree__link" href="#feat-Store-login">Store Log in</a></li>
           </ul>
         </li>
+        <li>
+          <button class="tree__toggle" aria-expanded="true">Store Configurations</button>
+          <ul class="tree__children is-collapsed">
+            <li><a class="tree__link" href="#feat-is-delivery-enabled">Is delivery enabled?</a></li>
+            <li><a class="tree__link" href="#feat-is-pickup-enabled">Is pikcup enabled?</a></li>
+            <li><a class="tree__link" href="#feat-store-offline">Is store offline?</a></li>
+            <li><a class="tree__link" href="#feat-max-pending-orders">Maximum pending orders</a></li>
+            <li><a class="tree__link" href="#feat-delivery-geo-boundary">Configure map regions that allow delivery</a></li>
+            <li><a class="tree__link" href="#feat-multiple-deliveries-in-same-trip">Are multiple orders are delivered in a single trip?</a></li>
+          </ul>
+        </li>
+
         <li>
           <button class="tree__toggle" aria-expanded="true">Catalog</button>
           <ul class="tree__children is-collapsed">
             <li><a class="tree__link" href="#feat-categories">Categories</a></li>
-            <li><a class="tree__link" href="#feat-search">Search</a></li>
-            <li><a class="tree__link" href="#feat-variants">Variants & pricing</a></li>
+            <li><a class="tree__link" href="#feat-catalogue">Product Catalogue</a></li>
           </ul>
         </li>
         <li>
@@ -123,14 +134,74 @@
             <li><a class="tree__link" href="#feat-top">Top products</a></li>
           </ul>
         </li>
+        <li>
+          <button class="tree__toggle" aria-expanded="false">Deliveries</button>
+          <ul class="tree__children is-collapsed">
+            <li><a class="tree__link" href="#feat-delivery-agent-details">Delivery agent details</a></li>
+            <li><a class="tree__link" href="#feat-assign-delivery-agent-to-order">Assign delivery agent to order(s)</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
   </aside>
 
   <section class="features__content" aria-live="polite">
-    <article id="Store-Onboarding" class="feature-section is-visible">
-      <h1>gsdfgsdfg</h1>
-      <p>Organize your catalog into categories for easy browsing and faster discovery. Control visibility and ordering.</p>
+    <article id="feat-Store-Onboarding" class="feature-section is-visible">
+      <h1>Onboarding</h1>
+      <p>The onboarding starts after the store has paid for the subscription and has provided all the information that is needed to start processing online orders.
+        We will need details like: 
+        <ul>
+          <li>GST Number</li>
+          <li>Address of the store</li>
+          <li>Phone number (for the users to allow contacting over a call in case of trouble)</li>
+        </ul>
+      </p>
+
+      <p>The store is given the unique QR code that would open your store when scanned.</p>
+    </article>
+
+    <article id="feat-Store-login" class="feature-section is-visible">
+      <h1>Log in</h1>
+      <p>The user can log in using either Google or Apple account. The app itself does not store any password for store owners.</p>
+      <p>If a given user is associated with more then one stores, the step after log in will prompt to select the store.</p>
+      <p>Because this is a cloud hosted solution, the users are free to log in from any device they chose.</p>
+    </article>
+
+    <article id="feat-is-delivery-enabled" class="feature-section is-visible">
+      <h1>Delivery enabled?</h1>
+      <p>The store can chose to turn this option on or off.</p>
+      <p>If this option is turned off, the users can not have the goods dedlivered.</p>
+    </article>
+
+    <article id="feat-is-pickup-enabled" class="feature-section is-visible">
+      <h1>In store pickup enabled?</h1>
+      <p>The store can chose to turn this option on or off.</p>
+      <p>If this option is turned off, the users can not have the in store pickup.</p>
+    </article>
+    
+    <article id="feat-store-offline" class="feature-section is-visible">
+      <h1>Is store offline?</h1>
+      <p>The store can chose to turn this option on or off.</p>
+      <p>If this option is on, the users will not be able to place any orders at all. This option allows the store to configure an additional message to be shown to the user when the store is offline.</p>
+    </article>
+
+    <article id="feat-max-pending-orders" class="feature-section is-visible">
+      <h1>Max pending order</h1>
+      <p>This feature is here to prevent the store from being over loaded from many oders that it can not fulfill</p>
+      <p>This configuration when set to 0 will allow unlimited number of users to place an order.</p>
+      <p>This configuration when set to a number will prevent any new orders from coming in. The users will see a message that says that the store is overloaded.</p>
+    </article>
+
+    <article id="feat-delivery-geo-boundary" class="feature-section is-visible">
+      <h1>Configure map regions that allow delivery</h1>
+      <p>This configuration controls which areas of the city are servable by the store. Any areas outside that boundary are un-servable for the store.</p>
+      <p>Our sales team will agree with you on the region and will pass it on to the implementation team.</p>
+      <p>You will have to reach out to support for changing this option.</p>
+    </article>
+
+    <article id="feat-multiple-deliveries-in-same-trip" class="feature-section is-visible">
+      <h1>Are multiple orders are delivered in a single trip?</h1>
+      <p>If online deliveries are enabled, the store could decide if one dispatch will happen for each order or there will be one larger trip created that will cover all the customers.</p>
     </article>
 
     <article id="feat-categories" class="feature-section">
@@ -138,15 +209,15 @@
       <p>Organize your catalog into categories for easy browsing and faster discovery. Control visibility and ordering.</p>
     </article>
 
-    <article id="feat-search" class="feature-section" hidden>
-      <h1>Search</h1>
-      <p>Instant keyword search with typo-tolerance helps customers find items quickly.</p>
+    <article id="feat-catalogue" class="feature-section" hidden>
+      <h1>Product Catalogue</h1>
+      <p>Add, update and disable the products that the user sees.</p>
+      <p>Support for sizes, colors. </p> 
+      <p>Custom units like mg, gm, KG, ML, Liters, units supported </p> 
+      <p>Configuration of flexible pricing proportional to quantity (e.g. buying 100 KG of something will give you slightly cheaper price).</p>
     </article>
 
-    <article id="feat-variants" class="feature-section" hidden>
-      <h1>Variants & Pricing</h1>
-      <p>Support for sizes, colors, and custom units; flexible pricing and taxes.</p>
-    </article>
+    
 
     <article id="feat-live-queue" class="feature-section" hidden>
       <h1>Live Queue</h1>
@@ -175,7 +246,9 @@
 
     <article id="feat-payments" class="feature-section" hidden>
       <h1>Payments</h1>
-      <p>Support for COD and online payments with popular providers.</p>
+      <p>Option to make everything 'pay at the counter'</p>
+      <p>Option to integrate with the payment gateways (gateway fees applies)</p>
+      <p>Option to share the store's UPI id with the users, asking them to provide payment screenshot and later confirming the payment and then confirming the order.</p>
     </article>
 
     <article id="feat-sales" class="feature-section" hidden>
@@ -187,6 +260,20 @@
       <h1>Top Products</h1>
       <p>Identify best-sellers and optimize your catalog.</p>
     </article>
+    
+    <article id="feat-delivery-agent-details" class="feature-section" hidden>
+      <h1>Enroll delivery agents to the system</h1>
+      <p>Maintain details of the delivery agents in the system.</p>
+      <p>Enroll them using the email address (for them to log in using SSO).</p>
+    </article>
+
+    <article id="feat-assign-delivery-agent-to-order" class="feature-section" hidden>
+      <h1>Assign delivery agent to order(s)</h1>
+      <p>Option to auto assign the order to a single delivery agent.</p>
+      <p>If one trip is supposed to deliver many orders, system also optimizes the route. Also, lets the customers know what route an agent is taking without revealing other customers' addresses.</p>
+    </article>
+    
+    
   </section>
 </main>
 <script src="/assets/js/features.js" defer></script>
