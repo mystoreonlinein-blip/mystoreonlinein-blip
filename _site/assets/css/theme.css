@@ -40,7 +40,12 @@ body { padding-top: var(--header-h); }
   text-decoration: none;
   font-weight: 600;
   letter-spacing: -0.01em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
 }
+
+.site-header__logo svg { display: block; }
 
 .site-header__nav { display: inline-flex; gap: 0.9rem; }
 
