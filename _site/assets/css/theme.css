@@ -109,6 +109,9 @@ body { padding-top: var(--header-h); }
   justify-content: center;
 }
 
+/* Ensure footer text centers on all devices */
+.site-footer small { display: block; margin: 0 auto; text-align: center; width: 100%; }
+
 @media (prefers-color-scheme: dark) {
   .site-footer__wrap {
     color: rgba(245, 245, 247, 0.65);
