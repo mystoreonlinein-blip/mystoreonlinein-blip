@@ -10,7 +10,7 @@ body {
   margin: 0 auto;
   padding: 2rem;
   /* Fill viewport minus fixed header and footer to avoid stray scrollbars */
-  min-height: calc(100vh - var(--header-h) - 32px);
+  min-height: calc(100svh - var(--header-h) - var(--footer-h));
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  min-height: 100vh;
+  /* Let .hero control height; avoid stacking with header padding */
   background: radial-gradient(circle at top, #ffffff 0%, #f5f5f7 60%, #ebebef 100%);
   color: #1d1d1f;
 }
@@ -9,7 +9,8 @@ body {
   max-width: 760px;
   margin: 0 auto;
   padding: 2rem;
-  min-height: calc(100vh - var(--header-h));
+  /* Fill viewport minus fixed header and footer to prevent stray scrollbars */
+  min-height: calc(100svh - var(--header-h) - var(--footer-h));
   display: flex;
   flex-direction: column;
   align-items: center;
