@@ -134,8 +134,8 @@ h1 { margin: 1rem 0 0.75rem; font-size: clamp(2rem, 5vw, 3rem); font-weight: 600
 }
 .step__img {
   /* Keep images within their column to avoid overflow */
-  width: auto;
-  max-width: min(300px, 100%);
+  width: 100%;
+  max-width: 300px;
   height: auto;
   display: block;
   border-radius: 12px;
