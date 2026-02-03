@@ -33,6 +33,7 @@ stylesheet: /assets/css/features.css
           <ul class="tree__children is-collapsed">
             <li><a class="tree__link" href="#feat-categories">Categories</a></li>
             <li><a class="tree__link" href="#feat-catalogue">Product Catalogue</a></li>
+            <li><a class="tree__link" href="#feat-inventory">Inventory Management</a></li>
           </ul>
         </li>
         <li>
@@ -256,7 +257,37 @@ stylesheet: /assets/css/features.css
       </div>
     </article>
 
+    <article id="feat-inventory" class="feature-section" hidden>
+      <h1>Inventory Management</h1>
+      <p>Control stock tracking for your products. Some stores may choose not to track inventory, while others need precise stock management to prevent overselling.</p>
 
+      <p><strong>Enable Inventory Tracking</strong></p>
+      <p>This global setting controls whether your store tracks product inventory. When you toggle this setting, it affects your entire catalog and order processing workflow.</p>
+
+      <p><strong>When Inventory Tracking is Enabled:</strong></p>
+      <ul>
+        <li><strong>Stock availability display:</strong> Products show stock availability on the storefront, letting customers know if items are in stock</li>
+        <li><strong>Inventory fields in products:</strong> The product edit page includes inventory quantity fields for tracking stock levels</li>
+        <li><strong>Order validation:</strong> The order flow automatically checks stock availability before accepting orders</li>
+        <li><strong>Out-of-stock prevention:</strong> Orders cannot be placed for items that are out of stock, preventing overselling</li>
+        <li><strong>Automatic stock updates:</strong> Stock levels are automatically decremented when orders are confirmed</li>
+      </ul>
+
+      <p><strong>When Inventory Tracking is Disabled:</strong></p>
+      <ul>
+        <li>No stock tracking or inventory fields in product management</li>
+        <li>Orders can be placed regardless of stock levels</li>
+        <li>Suitable for stores with unlimited stock, made-to-order items, or service-based offerings</li>
+      </ul>
+
+      <p>This flexibility allows different types of businesses to use the platform - from stores with limited inventory that need precise tracking, to stores that don't need inventory constraints.</p>
+
+      <div style="margin-top: 1.5rem;">
+        <a href="/assets/enable or disable inventory.png">
+          <img src="/assets/enable or disable inventory.png" alt="Inventory management settings showing Enable Inventory Tracking toggle with description of stock control behavior" style="max-width: 600px; width: 100%; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); cursor: pointer;">
+        </a>
+      </div>
+    </article>
 
     <article id="feat-order-workflow" class="feature-section" hidden>
       <h1>Order Workflow Automation</h1>
