@@ -64,4 +64,42 @@ document.addEventListener('DOMContentLoaded', function () {
                  || (firstLink && (firstLink.getAttribute('href')||'').replace('#',''))
                  || (firstSection && firstSection.id) || '';
   if (initial) showSection(initial);
+
+  // Image Lightbox
+  var modal = document.getElementById('lightbox-modal');
+  var modalImg = document.getElementById('lightbox-image');
+  var closeBtn = document.querySelector('.lightbox-close');
+
+  // Add click handlers to all image links
+  document.querySelectorAll('a[href$=".png"], a[href$=".jpg"], a[href$=".jpeg"], a[href$=".gif"]').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      var imgSrc = this.getAttribute('href');
+      var imgAlt = this.querySelector('img') ? this.querySelector('img').getAttribute('alt') : '';
+      modalImg.src = imgSrc;
+      modalImg.alt = imgAlt;
+      modal.classList.add('active');
+    });
+  });
+
+  // Close modal when clicking the close button
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function() {
+      modal.classList.remove('active');
+    });
+  }
+
+  // Close modal when clicking outside the image
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) {
+      modal.classList.remove('active');
+    }
+  });
+
+  // Close modal on Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+      modal.classList.remove('active');
+    }
+  });
 });

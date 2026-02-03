@@ -101,6 +101,52 @@ body { margin: 0; color: #1d1d1f; }
   .features__sidebar { position: static; }
 }
 
+/* Image Lightbox */
+.lightbox-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.lightbox-modal.active {
+  display: flex;
+}
+
+.lightbox-content {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  line-height: 1;
+  transition: opacity 0.2s;
+}
+
+.lightbox-close:hover {
+  opacity: 0.7;
+}
+
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
   body { color: #f5f5f7; }
