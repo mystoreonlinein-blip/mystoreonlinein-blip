@@ -202,11 +202,33 @@ stylesheet: /assets/css/features.css
 
     <article id="feat-catalogue" class="feature-section" hidden>
       <h1>Product Catalogue</h1>
-      <p>Add, update and disable the products that the user sees.</p>
-      <p>Add/update the picture.</p>
-      <p>Support for sizes, colors. </p> 
-      <p>Custom units like mg, gm, KG, ML, Liters, units supported </p> 
-      <p>Configuration of flexible pricing proportional to quantity (e.g. buying 100 KG of something will give you slightly cheaper price).</p>
+      <p>Manage your complete product inventory with detailed product information and flexible pricing options.</p>
+
+      <p><strong>Product Information:</strong></p>
+      <ul>
+        <li><strong>Basic details:</strong> Product name, description, and SKU for inventory tracking</li>
+        <li><strong>Category assignment:</strong> Organize products into categories</li>
+        <li><strong>Product images:</strong> Add and update product photos</li>
+        <li><strong>Active/Inactive status:</strong> Control product visibility to customers</li>
+      </ul>
+
+      <p><strong>Units and Quantities:</strong></p>
+      <ul>
+        <li><strong>Flexible selling units:</strong> Support for weight (grams, kg), volume (ml, liters), and custom units</li>
+        <li><strong>Minimum order quantity:</strong> Set minimum purchase requirements with automatic unit conversion (e.g., enter as kg or grams, stored as whole grams)</li>
+      </ul>
+
+      <p><strong>Tiered Pricing (Bulk Discounts):</strong></p>
+      <ul>
+        <li>Create multiple pricing tiers based on quantity ranges</li>
+        <li>Define minimum and maximum quantities for each tier</li>
+        <li>Set different prices per unit for each tier to encourage bulk purchases</li>
+        <li>Example: 0.25-1 kg at ₹150/kg, 1+ kg at ₹140/kg</li>
+      </ul>
+
+      <div style="margin-top: 1.5rem;">
+        <img src="/assets/product-edit.png" alt="Product edit form showing name, description, category, SKU, selling units, minimum order quantity, and tiered pricing configuration with bulk discount tiers" style="max-width: 600px; width: 100%; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+      </div>
     </article>
 
     
