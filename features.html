@@ -131,9 +131,24 @@ stylesheet: /assets/css/features.css
     </article>
     
     <article id="feat-store-offline" class="feature-section is-visible">
-      <h1>Is store offline?</h1>
-      <p>The store can chose to turn this option on or off.</p>
-      <p>If this option is on, the users will not be able to place any orders at all. This option allows the store to configure an additional message to be shown to the user when the store is offline.</p>
+      <h1>Store Status & Business Hours</h1>
+
+      <h2>Store Online/Offline Toggle</h2>
+      <p>The store can use the "Store Online" toggle to immediately take the store offline regardless of business hours configuration. When disabled, customers cannot place new orders. The store owner can configure a custom offline message that will be displayed to customers when they try to open the store.</p>
+
+      <h2>Business Hours Configuration</h2>
+      <p>Configure operating hours for each day of the week independently. For each day, you can choose from three options:</p>
+      <ul>
+        <li><strong>Closed:</strong> The store does not accept orders on this day. Customers will see "Not accepting orders" for that day.</li>
+        <li><strong>Set Hours:</strong> Configure specific opening and closing times (e.g., 09:00 AM to 09:00 PM). Orders are only accepted during these hours, and the store automatically goes offline outside these times.</li>
+        <li><strong>24 Hours:</strong> The store accepts orders all day on this day. Status shows "Open 24 hours".</li>
+      </ul>
+
+      <p>The system automatically manages store availability based on the configured business hours, turning order acceptance on and off at the specified times each day.</p>
+
+      <div style="margin-top: 1.5rem;">
+        <img src="/assets/store online status.png" alt="Store status settings showing overall online toggle and per-day business hours configuration with Closed, Set Hours, and 24 Hours options" style="max-width: 600px; width: 100%; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+      </div>
     </article>
 
     <article id="feat-max-pending-orders" class="feature-section is-visible">
