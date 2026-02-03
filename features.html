@@ -40,6 +40,7 @@ stylesheet: /assets/css/features.css
           <button class="tree__toggle" aria-expanded="false">Orders</button>
           <ul class="tree__children is-collapsed">
             <li><a class="tree__link" href="#feat-order-workflow">Order workflow</a></li>
+            <li><a class="tree__link" href="#feat-partial-fulfillment">Partial fulfillment</a></li>
             <li><a class="tree__link" href="#feat-live-queue">Live queue</a></li>
             <li><a class="tree__link" href="#feat-invoices">Invoices & taxes</a></li>
           </ul>
@@ -313,6 +314,48 @@ stylesheet: /assets/css/features.css
       <div style="margin-top: 1.5rem;">
         <a href="/assets/order flow.png">
           <img src="/assets/order flow.png" alt="Order workflow settings showing Auto-Accept Orders and Auto-Start Preparing toggles with current workflow display" style="max-width: 600px; width: 100%; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); cursor: pointer;">
+        </a>
+      </div>
+    </article>
+
+    <article id="feat-partial-fulfillment" class="feature-section" hidden>
+      <h1>Partial Fulfillment</h1>
+      <p>Handle out-of-stock situations gracefully by offering customers the option to proceed with only the available items instead of canceling the entire order.</p>
+
+      <p><strong>How Partial Fulfillment Works:</strong></p>
+      <ol>
+        <li><strong>Store identifies unavailable items:</strong> When preparing an order, the store discovers some items are out of stock or unavailable</li>
+        <li><strong>Store marks items as unavailable:</strong> The store removes the unavailable items from the order and specifies the reason (e.g., "Insufficient inventory")</li>
+        <li><strong>Customer receives notification:</strong> The customer is notified that some items are unavailable and is shown the modified order with only available items</li>
+        <li><strong>Customer makes decision:</strong> The customer can choose to either:
+          <ul>
+            <li>Proceed with the partial order (only available items)</li>
+            <li>Cancel the entire order</li>
+          </ul>
+        </li>
+        <li><strong>Order updates:</strong> If customer approves, the order proceeds with updated items and pricing. If customer cancels, the order is canceled</li>
+      </ol>
+
+      <p><strong>Store Portal View:</strong></p>
+      <p>Once a customer approves partial fulfillment, the store portal displays:</p>
+      <ul>
+        <li><strong>Notification banner:</strong> "Customer approved proceeding with available items. Some items were removed from this order."</li>
+        <li><strong>Order Items section:</strong> Lists the items being fulfilled with current quantities and pricing</li>
+        <li><strong>Removed Items section:</strong> Shows unavailable items (struck through) with the reason for removal</li>
+        <li><strong>Updated pricing:</strong> Subtotal, tax, and total reflect only the items being fulfilled</li>
+      </ul>
+
+      <p><strong>Benefits:</strong></p>
+      <ul>
+        <li><strong>Reduced cancellations:</strong> Customers can still receive what's available instead of losing the entire order</li>
+        <li><strong>Better customer experience:</strong> Transparent communication about stock issues with customer choice</li>
+        <li><strong>Revenue retention:</strong> Complete partial orders instead of full cancellations</li>
+        <li><strong>Clear audit trail:</strong> System maintains record of what was removed and why</li>
+      </ul>
+
+      <div style="margin-top: 1.5rem;">
+        <a href="/assets/partial fulfillment.png">
+          <img src="/assets/partial fulfillment.png" alt="Partial fulfillment order view showing customer information, available items, removed items with reason, and updated pricing after customer approval" style="max-width: 600px; width: 100%; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); cursor: pointer;">
         </a>
       </div>
     </article>
