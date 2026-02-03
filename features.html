@@ -152,10 +152,20 @@ stylesheet: /assets/css/features.css
     </article>
 
     <article id="feat-max-pending-orders" class="feature-section is-visible">
-      <h1>Max pending order</h1>
-      <p>This feature is here to prevent the store from being over loaded from many oders that it can not fulfill</p>
-      <p>This configuration when set to 0 will allow unlimited number of users to place an order.</p>
-      <p>This configuration when set to a number will prevent any new orders from coming in. The users will see a message that says that the store is overloaded.</p>
+      <h1>Maximum Pending Orders</h1>
+      <p>Control how many pending orders your store can handle at once to prevent being overwhelmed with orders you cannot fulfill.</p>
+
+      <p><strong>How it works:</strong></p>
+      <ul>
+        <li><strong>Set to 0:</strong> Unlimited orders allowed. The store will accept orders without any cap.</li>
+        <li><strong>Set to a number (e.g., 100):</strong> When the number of pending orders reaches this limit, the store will automatically pause and stop accepting new orders. Customers will see a message indicating the store is temporarily overloaded.</li>
+      </ul>
+
+      <p>Once pending orders are completed and the count drops below the limit, the store automatically resumes accepting orders.</p>
+
+      <div style="margin-top: 1.5rem;">
+        <img src="/assets/max pending orders.png" alt="Maximum pending orders setting showing limit of 100 with auto-pause message" style="max-width: 600px; width: 100%; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+      </div>
     </article>
 
     <article id="feat-delivery-geo-boundary" class="feature-section is-visible">
