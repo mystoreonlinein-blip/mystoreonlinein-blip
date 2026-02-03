@@ -38,6 +38,7 @@ stylesheet: /assets/css/features.css
         <li>
           <button class="tree__toggle" aria-expanded="false">Orders</button>
           <ul class="tree__children is-collapsed">
+            <li><a class="tree__link" href="#feat-order-workflow">Order workflow</a></li>
             <li><a class="tree__link" href="#feat-live-queue">Live queue</a></li>
             <li><a class="tree__link" href="#feat-invoices">Invoices & taxes</a></li>
           </ul>
@@ -255,7 +256,34 @@ stylesheet: /assets/css/features.css
       </div>
     </article>
 
-    
+
+
+    <article id="feat-order-workflow" class="feature-section" hidden>
+      <h1>Order Workflow Automation</h1>
+      <p>Configure how orders flow through your system by automating key steps in the order processing lifecycle.</p>
+
+      <p><strong>Auto-Accept Orders</strong></p>
+      <p>When enabled, incoming orders are automatically confirmed without requiring manual approval from the store owner. When disabled, each order must be manually reviewed and accepted before moving forward in the workflow.</p>
+
+      <p><strong>Auto-Start Preparing</strong></p>
+      <p>When enabled, orders automatically move to the "Preparing" stage immediately after confirmation. When disabled, the store owner must manually start preparation for each order.</p>
+
+      <p><strong>Workflow Combinations:</strong></p>
+      <ul>
+        <li><strong>Manual confirm → Manual prepare:</strong> Both toggles off - full manual control over order processing</li>
+        <li><strong>Manual confirm → Auto prepare:</strong> Auto-Accept off, Auto-Start Preparing on - manually accept orders, then they automatically move to preparation</li>
+        <li><strong>Auto confirm → Manual prepare:</strong> Auto-Accept on, Auto-Start Preparing off - orders are automatically accepted but require manual trigger to start preparation</li>
+        <li><strong>Auto confirm → Auto prepare:</strong> Both toggles on - fully automated workflow from order placement to preparation</li>
+      </ul>
+
+      <p>The system displays your current workflow configuration to help you understand how orders will be processed.</p>
+
+      <div style="margin-top: 1.5rem;">
+        <a href="/assets/order flow.png">
+          <img src="/assets/order flow.png" alt="Order workflow settings showing Auto-Accept Orders and Auto-Start Preparing toggles with current workflow display" style="max-width: 600px; width: 100%; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); cursor: pointer;">
+        </a>
+      </div>
+    </article>
 
     <article id="feat-live-queue" class="feature-section" hidden>
       <h1>Live Queue</h1>
