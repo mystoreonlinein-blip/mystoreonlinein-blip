@@ -336,7 +336,23 @@ stylesheet: /assets/css/features.css
         <li><strong>Order updates:</strong> If customer approves, the order proceeds with updated items and pricing. If customer cancels, the order is canceled</li>
       </ol>
 
-      <p><strong>Store Portal View:</strong></p>
+      <p><strong>Store Owner Interface (Marking Unavailable Items):</strong></p>
+      <p>When the store needs to mark items as unavailable, they use the "Send Order to Customer for Review" dialog:</p>
+      <ul>
+        <li><strong>Item selection:</strong> Checkboxes next to each order item to mark which ones cannot be fulfilled</li>
+        <li><strong>Item details:</strong> Each item shows tier, quantity, price, and total for reference</li>
+        <li><strong>Real-time summary:</strong> Shows count of items to mark unavailable vs. items that can be fulfilled</li>
+        <li><strong>Clear instructions:</strong> "Select items that cannot be fulfilled. The customer will be notified and can decide whether to proceed with the remaining items or cancel the order."</li>
+        <li><strong>Send to Customer button:</strong> Triggers notification to customer for approval decision</li>
+      </ul>
+
+      <div style="margin-top: 1.5rem;">
+        <a href="/assets/partial fulfillment admin view.png">
+          <img src="/assets/partial fulfillment admin view.png" alt="Store owner interface for partial fulfillment showing item selection checkboxes, real-time count of unavailable vs available items, and Send to Customer button" style="max-width: 600px; width: 100%; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); cursor: pointer;">
+        </a>
+      </div>
+
+      <p style="margin-top: 2rem;"><strong>Store Portal View After Customer Approval:</strong></p>
       <p>Once a customer approves partial fulfillment, the store portal displays:</p>
       <ul>
         <li><strong>Notification banner:</strong> "Customer approved proceeding with available items. Some items were removed from this order."</li>
