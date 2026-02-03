@@ -56,6 +56,7 @@ stylesheet: /assets/css/features.css
           <ul class="tree__children is-collapsed">
             <li><a class="tree__link" href="#feat-whatsapp">WhatsApp updates</a></li>
             <li><a class="tree__link" href="#feat-payments">Payments</a></li>
+            <li><a class="tree__link" href="#feat-payment-tracking">Payment tracking</a></li>
           </ul>
         </li>
         <li>
@@ -347,6 +348,45 @@ stylesheet: /assets/css/features.css
       <p>Option to make everything 'pay at the counter'</p>
       <p>Option to integrate with the payment gateways (gateway fees applies)</p>
       <p>Option to share the store's UPI id with the users, asking them to provide payment screenshot and later confirming the payment and then confirming the order.</p>
+    </article>
+
+    <article id="feat-payment-tracking" class="feature-section" hidden>
+      <h1>Payment Tracking</h1>
+      <p>Control whether to track payment information for orders. This setting determines if your store operates as a full e-commerce platform or as billing-only software.</p>
+
+      <p><strong>Track Payments Toggle</strong></p>
+      <p>This global setting controls payment tracking behavior across your entire store.</p>
+
+      <p><strong>When Payment Tracking is Enabled (Default):</strong></p>
+      <ul>
+        <li><strong>Payment method selection:</strong> Customers select payment methods during checkout (cash on delivery, online payment, UPI, etc.)</li>
+        <li><strong>Payment status tracking:</strong> Orders show payment status (Paid, Pending, Failed) throughout their lifecycle</li>
+        <li><strong>Payment confirmation workflow:</strong> Orders can be confirmed or held based on payment status</li>
+        <li><strong>Full e-commerce mode:</strong> Complete online ordering with payment processing</li>
+      </ul>
+
+      <p><strong>When Payment Tracking is Disabled:</strong></p>
+      <ul>
+        <li><strong>No payment selection:</strong> Customers don't choose payment methods during checkout</li>
+        <li><strong>No payment status:</strong> Payment status is not displayed or tracked in the system</li>
+        <li><strong>Billing-only mode:</strong> System functions purely for order management and invoicing</li>
+        <li><strong>Offline payment handling:</strong> Ideal for stores that handle all payments offline, outside the system</li>
+        <li><strong>B2B scenarios:</strong> Perfect for wholesale or B2B operations where invoicing happens separately</li>
+      </ul>
+
+      <p><strong>Use Cases for Disabling Payment Tracking:</strong></p>
+      <ul>
+        <li>Stores that only accept payments at physical counter or upon delivery</li>
+        <li>B2B businesses that invoice customers separately with net payment terms</li>
+        <li>Businesses using external accounting systems for payment management</li>
+        <li>Order management for internal operations without customer payments</li>
+      </ul>
+
+      <div style="margin-top: 1.5rem;">
+        <a href="/assets/Payment tracking.png">
+          <img src="/assets/Payment tracking.png" alt="Payment tracking settings showing Track Payments toggle with description of billing-only mode when disabled" style="max-width: 600px; width: 100%; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); cursor: pointer;">
+        </a>
+      </div>
     </article>
 
     <article id="feat-sales" class="feature-section" hidden>
